@@ -14,9 +14,16 @@ services:
 
 
   web:
-    image: cs3219_task_a
+    image: whyjayxp/cs3219_task_a
     container_name: task_a_web
-    build:
-      context: ./www
     ports:
         - 8080:80
+
+
+  # web:
+  #   image: cs3219_task_a
+  #   container_name: task_a_web
+  #   build:
+  #     context: ./www
+  #   ports:
+  #       - 8080:80
