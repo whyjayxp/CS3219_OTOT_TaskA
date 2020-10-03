@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+
+  reverse-proxy:
+    image: nginx:latest
+    container_name: task_a_rproxy
+    depends_on: 
+        - web
+    volumes:
+        - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+        - 80:80
+
+
+  web:
+    image: cs3219_task_a
+    container_name: task_a_web
+    build:
+      context: ./www
+    ports:
+        - 8080:80
