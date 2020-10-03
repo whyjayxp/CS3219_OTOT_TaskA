@@ -1,2 +1,8 @@
 # CS3219_OTOT_TaskA
-Submission for CS3219 OTOT Assignment Task A
+
+After cloning the repo, go into the project folder and run the following command:
+
+```
+docker-compose up
+```
+Open a browser and go to `http://localhost` to load the static HTML page.
